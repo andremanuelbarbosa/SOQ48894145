@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet id="1.0.0-00" author="SOQ48894145">
+        <createTable tableName="car">
+            <column name="make" type="varchar(256)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="model" type="varchar(256)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="car_description" type="varchar(256)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <insert tableName="car">
+            <column name="make" value="VW"/>
+            <column name="model" value="Golf"/>
+            <column name="car_description" value="Make: VW Model: Golf"/>
+        </insert>
+
+        <insert tableName="car">
+            <column name="make" value="Hyundai"/>
+            <column name="model" value="i30"/>
+            <column name="car_description" value="Make: Hyundai Model: i30"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
