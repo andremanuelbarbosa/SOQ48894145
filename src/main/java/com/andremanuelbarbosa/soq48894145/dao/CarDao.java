@@ -7,8 +7,8 @@ import org.skife.jdbi.v2.sqlobject.SqlQuery;
 import org.skife.jdbi.v2.sqlobject.customizers.RegisterMapper;
 
 @RegisterMapper(CarMapper.class)
-public interface CarDao {
+public abstract class CarDao {
 
     @SqlQuery("select * from car where car_description = :car.carDescription")
-    Car getCarDescription(@BindBean("car") Car car);
+    public abstract Car getCarDescription(@BindBean("car") Car car);
 }
